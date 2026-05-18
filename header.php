@@ -27,16 +27,16 @@ if(isset($message)){
       <div class="flex">
 
          <div class="share">
-            <a href="#" class="fab fa-facebook-f"></a>
-            <a href="#" class="fab fa-twitter"></a>
-            <a href="#" class="fab fa-instagram"></a>
-            <a href="#" class="fab fa-linkedin"></a>
+               <a href="#" class="fab fa-facebook-f"></a>
+               <a href="#" class="fab fa-twitter"></a>
+               <a href="#" class="fab fa-instagram"></a>
+               <a href="#" class="fab fa-linkedin"></a>
          </div>
 
          <p>
-            Welcome to BookFair |
-            <a href="login.php">Login</a> |
-            <a href="register.php">Register</a>
+               Welcome to BookFair |
+               <a href="login.php">Login</a> |
+               <a href="register.php">Register</a>
          </p>
 
       </div>
@@ -55,43 +55,43 @@ if(isset($message)){
             <a href="orders.php">Orders</a>
          </nav>
 
-         <div class="icons">
+            <div class="icons">
 
-            <div id="menu-btn" class="fas fa-bars"></div>
+               <div id="menu-btn" class="fas fa-bars"></div>
 
-            <a href="search_page.php" class="fas fa-search"></a>
+               <a href="search_page.php" class="fas fa-search"></a>
 
-            <div id="user-btn" class="fas fa-user"></div>
+               <div id="user-btn" class="fas fa-user"></div>
 
-            <?php
-               $select_cart_number = mysqli_query($conn, "SELECT * FROM `cart` WHERE user_id = '$user_id'")
-               or die('query failed');
+               <?php
+                  $select_cart_number = mysqli_query($conn, "SELECT * FROM `cart` WHERE user_id = '$user_id'")
+                  or die('query failed');
 
-               $cart_rows_number = mysqli_num_rows($select_cart_number);
-            ?>
+                  $cart_rows_number = mysqli_num_rows($select_cart_number);
+               ?>
 
-            <a href="cart.php">
-               <i class="fas fa-shopping-cart"></i>
-               <span>(<?php echo $cart_rows_number; ?>)</span>
-            </a>
+               <a href="cart.php">
+                  <i class="fas fa-shopping-cart"></i>
+                  <span>(<?php echo $cart_rows_number; ?>)</span>
+               </a>
 
-         </div>
+            </div>
 
-         <div class="user-box">
+            <div class="user-box">
 
-            <p>
-               Name :
-               <span><?php echo $user_data['name']; ?></span>
-            </p>
+               <p>
+                  Name :
+                  <span><?php echo $user_data['name']; ?></span>
+               </p>
 
-            <p>
-               Email :
-               <span><?php echo $user_data['email']; ?></span>
-            </p>
+               <p>
+                  Email :
+                  <span><?php echo $user_data['email']; ?></span>
+               </p>
 
-            <a href="logout.php" class="delete-btn">Logout</a>
+               <a href="logout.php" class="delete-btn">Logout</a>
 
-         </div>
+            </div>
 
       </div>
    </div>
